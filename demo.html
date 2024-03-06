@@ -1,0 +1,102 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><script type="text/javascript">
+//<![CDATA[
+window.__cfRocketOptions = {byc:0,p:0,petok:"faced0145542cdf1a25e2a81dcb2498cb82b8c2b-1517484622-1800"};
+//]]>
+</script>
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/b7ef205d/cloudflare-static/rocket.min.js"></script>
+<style></style></head><body id="preview">
+<h2><a id="Demo_0"></a>Demo</h2>
+<h3><a id="List_2"></a>List</h3>
+<ul>
+<li>similar to js</li>
+</ul>
+<pre><code class="language-reason">[1,2,3];
+</code></pre>
+<h3><a id="function_10"></a>function</h3>
+<ul>
+<li>similar to js</li>
+</ul>
+<pre><code class="language-reason">let add = (x, y) =&gt; x + y;
+
+add(1, 2);
+add(&quot;1&quot;, 2);
+</code></pre>
+<h3><a id="currying_21"></a>currying</h3>
+<ul>
+<li>unlike js</li>
+<li>can call every function partially</li>
+</ul>
+<pre><code class="language-reason">/*has already*/ let add = (x, y) =&gt; x + y;
+let add5 = add(5);
+
+add5(2);
+</code></pre>
+<h3><a id="Pipe_33"></a>Pipe</h3>
+<pre><code class="language-reason">[1,2,3] |&gt; List.map((x) =&gt; x + 5);
+</code></pre>
+<h3><a id="Pipe__currying_39"></a>Pipe + currying</h3>
+<pre><code class="language-reason">[1,2,3] |&gt; List.map(add5);
+</code></pre>
+<h3><a id="Anoter_example_45"></a>Anoter example</h3>
+<pre><code class="language-reason">let concat = (l, r) =&gt; l ++ r;
+let concatWithSven = concat(&quot;Sven is &quot;);
+
+[&quot;blue&quot;, &quot;red&quot;, &quot;yellow&quot;] |&gt; List.map(concatWithSven);
+</code></pre>
+<h3><a id="ifelse_54"></a>if/else</h3>
+<ul>
+<li>everything is an expression</li>
+<li>msg contains the value</li>
+</ul>
+<pre><code class="language-reason">let msg = if (true) {
+  &quot;Yes&quot;
+} else {
+  &quot;No&quot;
+};
+</code></pre>
+<h3><a id="tupples__destructuring_67"></a>tupples + destructuring</h3>
+<ul>
+<li>super good describing shapes</li>
+<li>type keyword</li>
+</ul>
+<pre><code class="language-reason">type vec3d = (float, float, float);
+
+let vec = (1.1, 1.2, 1.3);
+
+let f = (vec: vec3d) =&gt; {
+  let (first, _, _) = vec;
+  print_float(first);
+};
+
+f(vec);
+
+f((1.1, 1.1));
+</code></pre>
+<h3><a id="Named_arg_87"></a>Named arg</h3>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> hey = (name, age) =&gt; a;
+hey = ({name, age}) =&gt; <span class="hljs-string">"Hey "</span> + name;
+</code></pre>
+<pre><code class="language-reason">let hey = (~name, ~age) =&gt; &quot;Hey &quot; ++ name;
+let heySven = hey(~name=&quot;sven&quot;);
+heySven(~age=21);
+heySven(21);
+</code></pre>
+<h3><a id="switch_pattern_101"></a>switch pattern</h3>
+<ul>
+<li>Option type</li>
+<li>Reason doesn’t have nulls, nor null bugs</li>
+</ul>
+<pre><code class="language-reason">let maybeName = None;
+let maybeName = Some(&quot;Sven&quot;);
+
+switch(maybeName) {
+  | None =&gt; &quot;?&quot;
+  | Some(name) =&gt; name
+}
+</code></pre>
+<h3><a id="if_time_operators_116"></a>(if time) operators</h3>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> concat = (++);
+concat(<span class="hljs-string">"ng"</span>, <span class="hljs-string">"eu"</span>);
+</code></pre>
+
+</body></html>
